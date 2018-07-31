@@ -1,0 +1,11 @@
+LandisData "Climate Config"				
+		
+
+ClimateTimeSeries			Daily_SequencedYears
+ClimateFile				"mmw_maurer.csv"
+ClimateFileFormat			Daily_Temp-C_Precip-mmDay
+
+SpinUpClimateTimeSeries			Daily_RandomYears
+SpinUpClimateFile			"mmw_maurer.csv"
+SpinUpClimateFileFormat			Daily_Temp-C_Precip-mmDay
+

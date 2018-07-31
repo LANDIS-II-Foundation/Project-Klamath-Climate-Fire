@@ -1,0 +1,14 @@
+LandisData  "Dynamic Fire Region Table"
+
+>> Fire Region Data Table
+>>      | Fire region  | Fire Size             | Seasonal Foliar Moisture Content (FMC) Data: Hi, Lo, and Proportion (Pr)   | Other Ecorgion Data
+>>      |              |                       | Spring (Sp)            | Summer (Su)             | Fall (Fa)               |           
+>> Year | Code  Name   | Mu  Sigma  Min   Max  | SpFMCLo SpFMCHi SpHiPr | SuFMCLo SuFMCHi SuFMCPr | FaFMCLo FaFMCHi FaHiPr  | OpenFuel NumFires 
+>> ----  ------------ 	----------------------	---------------------------------------------------------------------------   --------------------
+     0	  1	fire1	 7.35  0.4  1  18000	120    120   0.50         100    120     0.50        120     120     0.50	 31	0.8
+
+
+
+>> The ignitions are calculated as the occurrence of fire in 2000-2010 according to MTBS multiplied by a 2 (we dont' want to be ignition limited and CC studies suggest at least doubling of potential iginitions)
+>> Fire region 3 sizes are calibrated using the fed occurrence fire. 
+

@@ -1,0 +1,448 @@
+LandisData "Biomass Harvest"  <<edited 6-28-17   
+
+Timestep 5
+ManagementAreas "./E4_ownership_BAU_v4.tif"
+Stands	"./E4_stands_BAU_v5.tif"
+
+>> -----------------------------------------
+>> PRESCRIPTIONS
+
+Prescription    PNIF
+	StandRanking Economic
+>> Species Economic Rank Minimum Age
+>> ------- ------------- -----------
+PSME	75	40
+    SiteSelection   CompleteStandSpread 20 20 
+    CohortsRemoved  ClearCut
+    Plant PSME
+
+Prescription    Tribal
+	StandRanking Economic
+>> Species Economic Rank Minimum Age
+>> ------- ------------- -----------
+PSME	75	40
+    SiteSelection   CompleteStandSpread 20 20 
+    CohortsRemoved  SpeciesList
+>> Species Cohorts removed
+>> ------- ---------
+PSME	1-200
+PIPO	1-200
+CADE27	1-200
+ABGRC	1-200
+ABPRSH	1-200
+LIDE3	1-200
+ARME	All
+CHCH7	All
+QUCH2	All
+>>ACMA3	50-120
+>>ALRU2	50-120
+FX_Resp_Deciduous	All
+FX_Seed_Deciduous	All
+FX_Seed_Evergreen	All
+NoFX_Resp_Deciduous	All
+NoFX_Resp_Evergreen	All
+NoFX_Seed_Deciduous	All
+NoFX_Seed_Evergreen	All  
+Plant PSME
+
+Prescription    PIF
+StandRanking Economic
+>> Species Economic Rank Minimum Age
+>> ------- ------------- -----------
+PSME	75	40
+CADE27	65	40
+ABGRC	55	45
+    SiteSelection   CompleteStandSpread 40 40 
+    CohortsRemoved  ClearCut
+    
+Plant PSME
+
+>>Prescription    Pre_Comthin
+>>    StandRanking    MaxCohortAge
+>>    MaximumAge	20
+>>    MinimumTimeSinceLastHarvest	15
+>>    SiteSelection   CompleteStandSpread 45 45 
+>>    CohortsRemoved  SpeciesList
+>> Species Cohorts removed
+>> ------- ---------
+>>PSME	1-15 (30%)
+>>ABGRC	1-15 (30%)
+>>CADE27	1-15 (30%)
+>>ABPRSH  1-15 (30%)
+>>PIPO	1-15 (30%)
+>>PILA	1-15 (30%)
+>>LIDE3	1-15 (30%)
+>>ARME	All
+>>CHCH7	All
+>>QUCH2	All
+>>QUKE	All
+>>QUGA4	All
+>>ALRU2	1-20
+>>ACMA3	1-20
+>>FX_Resp_Deciduous	All
+>>FX_Seed_Deciduous	All
+>>FX_Seed_Evergreen	All
+>>NoFX_Resp_Deciduous	All
+>>NoFX_Resp_Evergreen	All
+>>NoFX_Seed_Deciduous	All
+>>NoFX_Seed_Evergreen	All
+
+Prescription    Salvage_plant
+  StandRanking	MaxCohortAge
+  SiteSelection	Complete	
+  MinTimeSinceDamage 1
+  CohortsRemoved PlantOnly
+Plant PSME CADE27
+
+Prescription    KMC_Fed
+StandRanking Economic
+>> Species Economic Rank Minimum Age
+>> ------- ------------- -----------
+PSME	75	50
+
+    SiteSelection   PatchCutting 40% 60
+    CohortsRemoved  SpeciesList
+>> Species Cohorts removed
+>> ------- ---------
+PSME	1-120
+PIPO	1-120
+CADE27	1-120
+ABGRC	1-120
+ABPRSH	1-120
+LIDE3	1-120
+ARME	1-120
+CHCH7	1-120
+QUCH2	1-120
+>>ACMA3	50-120
+>>ALRU2	50-120
+FX_Resp_Deciduous	All
+FX_Seed_Deciduous	All
+FX_Seed_Evergreen	All
+NoFX_Resp_Deciduous	All
+NoFX_Resp_Evergreen	All
+NoFX_Seed_Deciduous	All
+NoFX_Seed_Evergreen	All    
+
+
+Prescription	SOD_Sanit_Fed
+	StandRanking Economic
+>> Species Economic Rank Minimum Age
+>> ------- ------------- -----------
+LIDE3   100 	20
+    SiteSelection   PatchCutting 60% 9
+    CohortsRemoved  SpeciesList
+>> Species Cohorts removed
+>> ------- ---------
+LIDE3 All
+QUCH2  All
+QUGA4  All 
+QUKE  All
+
+Prescription	Oak_Restoration_Fed
+    StandRanking    Economic
+>> Species Economic Rank Minimum Age
+>> ------- ------------- -----------
+   QUGA4   75	20
+   QUKE   75 	20
+    SiteSelection   PatchCutting 60% 9
+    CohortsRemoved  SpeciesList
+>> Species Cohorts removed
+>> ------- ---------
+PSME	1-120
+ABGRC	1-120
+CADE27	1-120
+PIPO	1-120
+LIDE3	All
+ARME	All
+CHCH7	All
+QUCH2	All
+>>ALRU2	All
+>>ACMA3	All
+FX_Resp_Deciduous	All
+FX_Seed_Deciduous	All
+FX_Seed_Evergreen	All
+NoFX_Resp_Deciduous	All
+NoFX_Resp_Evergreen	All
+NoFX_Seed_Deciduous	All
+NoFX_Seed_Evergreen	All
+
+
+Prescription	PILA_Release_Fed
+    StandRanking    Economic
+>> Species Economic Rank Minimum Age
+>> ------- ------------- -----------
+   PILA	100	20
+    SiteSelection   PatchCutting 60% 10
+    CohortsRemoved  SpeciesList
+>> Species Cohorts removed
+>> ------- ---------
+PSME	1-120
+ABGRC	1-120
+CADE27	1-120
+PIPO	1-120
+LIDE3	All
+ARME	All
+CHCH7	All
+>>ACMA3	All	
+>>ALRU2	All
+FX_Resp_Deciduous	All
+FX_Seed_Deciduous	All
+FX_Seed_Evergreen	All
+NoFX_Resp_Deciduous	All
+NoFX_Resp_Evergreen	All
+NoFX_Seed_Deciduous	All
+NoFX_Seed_Evergreen	All
+QUCH2  All
+QUGA4  All 
+QUKE  All
+
+
+Prescription    RxFire  <<based on 4-ft Flamelength
+>>--------------------------------- 
+    
+    StandRanking    Random  << No species preference
+    MinimumAge	    20	<< Age (years) is the average age of the oldest cohorts (per site) in a stand
+>>    MinimumTimeSinceLastHarvest		1  << (years) Includes any management activity
+    
+    ForestTypeTable 
+    >> For each inclusion rule, >70% of the sites in a stand MUST contain at least one cohort 
+    >> of the given age range & spp. for a rule to be true.
+    >> To qualify, at least one of these rules MUST be true
+    
+    >> InclusionRule	ageRange	percentCells	species 
+    Optional 		20-200		70 		PIPO CADE27 PSME PILA ABGRC
+    Optional 		20-200		70 		QUCH2 QUGA4 QUKE
+    
+    SiteSelection   PatchCutting 80% 40 << Will try to spread to hit this target size in hectares
+    CohortsRemoved  SpeciesList
+       
+	>> Species  CohortsAges (Biomass reduction %)        
+        PSME    1-10 (85%) 11-20 (65%) 21-30 (59%) 31-40 (47%) 41-50 (38%) 51-60 (30%) 61-80 (24%) 81-100 (15%) 101-130 (7%) 131-150 (2%)
+	PIPO    1-10 (85%) 11-20 (65%) 21-30 (59%) 31-40 (47%) 41-50 (38%) 51-60 (30%) 61-80 (24%) 81-100 (15%) 101-130 (7%) 131-150 (2%)
+        PILA    1-10 (85%) 11-20 (65%) 21-30 (59%) 31-40 (47%) 41-50 (38%) 51-60 (30%) 61-80 (24%) 81-100 (15%) 101-130 (7%) 131-150 (2%)
+        ABGRC    1-10 (85%) 11-20 (65%) 21-30 (59%) 31-40 (47%) 41-50 (38%) 51-60 (30%) 71-80 (24%) 81-100 (15%) 101-130 (7%) 131-150 (2%)
+	ABPRSH	1-10 (85%) 11-20 (65%) 21-30 (59%) 31-40 (47%) 41-50 (38%) 51-60 (30%) 71-80 (24%) 81-100 (15%) 101-130 (7%) 131-150 (2%)
+	PIMO3	1-10 (85%) 11-20 (65%) 21-30 (59%) 31-40 (47%) 41-50 (38%) 51-60 (30%) 71-80 (24%) 81-100 (15%) 101-130 (7%) 131-150 (2%)
+        CADE27    1-10 (85%) 11-20 (65%) 21-30 (59%) 31-40 (47%) 41-50 (38%) 51-60 (30%) 61-80 (24%) 81-100 (15%) 101-130 (7%) 131-150 (2%)
+	QUCH2    1-10 (75%) 11-20 (60%) 21-30 (45%) 31-40 (35%) 41-50 (26%) 51-60 (18%) 61-80 (10%) 81-100 (4%)
+        QUGA4    1-10 (75%) 11-20 (60%) 21-30 (45%) 31-40 (35%) 41-50 (26%) 51-60 (18%) 61-80 (10%) 81-100 (4%)
+        QUKE    1-10 (75%) 11-20 (60%) 21-30 (45%) 31-40 (35%) 41-50 (26%) 51-60 (18%) 61-80 (10%) 81-100 (4%)
+	>>ACMA3	1-10 (95%) 11-20 (75%) 21-30 (65%) 31-40 (51%) 41-50 (42%) 51-60 (38%) 61-80 (30%) 81-100 (18%) 101-130 (10%) 131-150 (5%)
+	>>ALRU2	1-10 (95%) 11-20 (75%) 21-30 (65%) 31-40 (51%) 41-50 (42%) 51-60 (38%) 61-80 (30%) 81-100 (18%) 101-130 (10%) 131-150 (5%)
+	CHCH7	1-10 (95%) 11-20 (75%) 21-30 (65%) 31-40 (51%) 41-50 (42%) 51-60 (38%) 61-80 (30%) 81-100 (18%) 101-130 (10%) 131-150 (5%)
+	LIDE3	1-10 (95%) 11-20 (75%) 21-30 (65%) 31-40 (51%) 41-50 (42%) 51-60 (38%) 61-80 (30%) 81-100 (18%) 101-130 (10%) 131-150 (5%)
+	FX_Resp_Deciduous	All
+	FX_Seed_Deciduous	All
+	FX_Seed_Evergreen	All
+	NoFX_Resp_Deciduous	All
+	NoFX_Resp_Evergreen	All
+	NoFX_Seed_Deciduous	All
+	NoFX_Seed_Evergreen	All
+
+>>--------------------------------- 
+Prescription    MxFire  << Mixed Lethal Fire based on 6-ft FlameLength
+>>--------------------------------- 
+    
+    StandRanking    Random  << No species preference
+    MinimumAge	    80	<< Age (years) is the average age of the oldest cohorts (per site) in a stand
+    MinimumTimeSinceLastHarvest		1  << (years) Includes any management activity
+    
+    ForestTypeTable 
+    >> For each inclusion rule, >70% of the sites in a stand MUST contain at least one cohort 
+    >> of the given age range & spp. for a rule to be true.
+    >> To qualify, at least one of these rules MUST be true
+    
+    >> InclusionRule	ageRange	percentCells	species 
+    Optional 		100-160 	70 		PIPO CADE27 PSME PILA ABGRC 
+    Optional 		60-160		70 		QUCH2 QUGA4 QUKE
+    
+    SiteSelection   PatchCutting 80% 40 << Will try to spread to hit this target size in hectares
+    CohortsRemoved  SpeciesList
+       
+	>> Species  CohortsAges (Biomass reduction %)
+
+        PSME    1-10 (90%) 11-20 (70%) 21-30 (65%) 31-40 (56%) 41-50 (49%) 51-60 (42%) 61-80 (37%) 81-100 (15%) 101-130 (9%) 131-150 (3%)
+        PIPO    1-10 (90%) 11-20 (70%) 21-30 (65%) 31-40 (56%) 41-50 (49%) 51-60 (42%) 61-80 (37%) 81-100 (15%) 101-130 (9%) 131-150 (3%) 
+        PILA    1-10 (90%) 11-20 (70%) 21-30 (65%) 31-40 (56%) 41-50 (49%) 51-60 (42%) 61-80 (37%) 81-100 (15%) 101-130 (9%) 131-150 (3%)
+        ABGRC    1-10 (90%) 11-20 (70%) 21-30 (65%) 31-40 (56%) 41-50 (49%) 51-60 (42%) 61-80 (35%) 81-100 (15%) 101-130 (9%) 131-150 (3%)
+        CADE27    1-10 (90%) 11-20 (70%) 21-30 (65%) 31-40 (56%) 41-50 (49%) 51-60 (42%) 61-80 (35%) 81-100 (15%) 101-130 (9%) 131-150 (3%)
+	ABPRSH	1-10 (90%) 11-20 (70%) 21-30 (65%) 31-40 (56%) 41-50 (49%) 51-60 (42%) 61-80 (35%) 81-100 (15%) 101-130 (9%) 131-150 (3%)
+	PIMO3	1-10 (90%) 11-20 (70%) 21-30 (65%) 31-40 (56%) 41-50 (49%) 51-60 (42%) 61-80 (35%) 81-100 (15%) 101-130 (9%) 131-150 (3%)
+        QUCH2    1-10 (90%) 11-20 (70%) 21-30 (55%) 31-40 (46%) 41-50 (36%) 51-60 (28%) 61-80 (15%) 81-100 (5%) 
+        QUGA4    1-10 (90%) 11-20 (70%) 21-30 (55%) 31-40 (45%) 41-50 (36%) 51-60 (28%) 61-80 (15%) 81-100 (5%)
+        QUKE    1-10 (90%) 11-20 (70%) 21-30 (55%) 31-40 (45%) 41-50 (36%) 51-60 (28%) 61-80 (15%) 81-100 (5%)
+	>>ACMA3	1-10 (95%) 11-20 (85%) 21-30 (75%) 31-40 (65%) 41-50 (55%) 51-60 (50%) 61-80 (45%) 81-100 (30%) 101-130 (20%) 131-150 (10%)
+	>>ALRU2	1-10 (95%) 11-20 (85%) 21-30 (75%) 31-40 (65%) 41-50 (55%) 51-60 (50%) 61-80 (45%) 81-100 (30%) 101-130 (20%) 131-150 (10%)
+	CHCH7	1-10 (95%) 11-20 (85%) 21-30 (75%) 31-40 (65%) 41-50 (55%) 51-60 (50%) 61-80 (45%) 81-100 (30%) 101-130 (20%) 131-150 (10%)
+	LIDE3	1-10 (95%) 11-20 (85%) 21-30 (75%) 31-40 (65%) 41-50 (55%) 51-60 (50%) 61-80 (45%) 81-100 (30%) 101-130 (20%) 131-150 (10%)			
+        FX_Resp_Deciduous	All
+	FX_Seed_Deciduous	All
+	FX_Seed_Evergreen	All
+	NoFX_Resp_Deciduous	All
+	NoFX_Resp_Evergreen	All
+	NoFX_Seed_Deciduous	All
+	NoFX_Seed_Evergreen	All
+
+Prescription FireRisk-LightThinning	<< goal -> reduce fire risk by reducing ladder fuels, using hand-thinnging (remove trees < 14 inches dbh)
+
+    	StandRanking 	FireHazard 
+	
+	>> Fuel Type	Fuel Type Rank
+	>> ---------	-------------
+		1	55
+		2	55
+		4	55
+		7	55
+		13	55
+		14	55
+		8	55
+		9	55
+		5	36
+		6	36
+		3	24
+		90	12
+		91	4
+	
+
+	ForestTypeTable 
+
+	>> InclusionRule	AgeRAnge	PecentCells	Species
+	>> -------------	---------	-----------	--------
+
+
+	
+	SiteSelection 	CompleteStandSpread 40 40
+	
+>>	MinTimeSinceDamage	1
+
+    	CohortsRemoved SpeciesList 
+	
+	ABGRC	1-50(99%) 51-60(80%) 61-70(70%) 71-80(40%)  81-90 (5%) 91-120 (1%)
+	ABPRSH	1-50(99%) 51-60(80%) 61-70(70%) 71-80(40%)  81-90 (5%) 91-120 (1%)
+	CADE27	1-50(99%) 51-60(80%) 61-70(70%) 71-80(40%)  81-90 (5%) 91-120 (1%)
+	PIMO3	1-50(99%) 51-60(80%) 61-70(70%) 71-80(40%)  81-90 (5%) 91-120 (1%)
+
+	PIPO	1-30(99%) 31-40(75%) 41-50(50%) 51-60(30%) 61-70(12%) 71-80(5%) 81-90(2%) 91-120 (1%)
+	PSME	1-30(99%) 31-40(75%) 41-50(50%) 51-60(30%) 61-70(12%) 71-80(5%) 81-90(2%) 91-120 (1%)
+	PILA	1-30(99%) 31-40(75%) 41-50(50%) 51-60(30%) 61-70(12%) 71-80(5%) 81-90(2%) 91-120 (1%)
+
+	LIDE3	1-50(99%) 51-60(20%) 61-70(5%) 71-80(4%) 81-90(2%) 91-120 (1%)
+	CHCH7	1-50(99%) 51-60(20%) 61-70(5%) 71-80(4%) 81-90(2%) 91-120 (1%)
+	ARME	1-50(99%) 51-60(20%) 61-70(5%) 71-80(4%) 81-90(2%) 91-120 (1%)
+	QUCH2	1-50(99%) 51-60(20%) 61-70(5%) 71-80(4%) 81-90(2%) 91-120 (1%)
+
+	FX_Resp_Deciduous  	10-200 (15%)
+	FX_Seed_Deciduous	10-200 (15%)
+	FX_Seed_Evergreen	10-200 (15%)
+	NoFX_Resp_Deciduous	10-200 (15%)
+	NoFX_Resp_Evergreen	10-200 (15%)
+	NoFX_Seed_Deciduous	10-200 (15%)
+	NoFX_Seed_Evergreen	10-200 (15%)
+
+
+Prescription FireRisk-ModerateThinning	<< goal -> reduce fire risk by reducing ladder fuels, using mechanical-thinnging (remove trees < 30 inches dbh)
+
+
+    	StandRanking 	FireHazard 
+	
+	<< Fuel Type	Fuel Type Rank
+	<< ---------	-------------
+		1	55
+		2	55
+		4	55
+		7	55
+		13	55
+		14	55
+		8	55
+		9	55
+		5	36
+		6	36
+		3	24
+		90	12
+		91	4
+	
+
+	ForestTypeTable 
+
+	>> InclusionRule	AgeRAnge	PecentCells	Species
+	>> -------------	---------	-----------	--------
+
+	SiteSelection 	CompleteStandSpread 40 40
+
+>>	MinTimeSinceDamage 1
+
+    	CohortsRemoved SpeciesList 
+	ABGRC	1-50(99%) 51-60(95%) 61-70(85%) 71-80(75%)  81-90 (60%) 91-120 (25%)
+	ABPRSH	1-50(99%) 51-60(95%) 61-70(85%) 71-80(75%)  81-90 (60%) 91-120 (25%)
+	CADE27	1-50(99%) 51-60(95%) 61-70(85%) 71-80(75%)  81-90 (60%) 91-120 (25%)
+	PIMO3	1-50(99%) 51-60(95%) 61-70(85%) 71-80(75%)  81-90 (60%) 91-120 (25%)
+
+	PIPO	1-30(99%) 31-40(90%) 41-50(75%) 51-60(60%) 61-70(45%) 71-80(32%) 81-90(20%) 91-120 (10%)
+	PSME	1-30(99%) 31-40(90%) 41-50(75%) 51-60(60%) 61-70(45%) 71-80(32%) 81-90(20%) 91-120 (10%)
+	PILA	1-30(99%) 31-40(90%) 41-50(75%) 51-60(60%) 61-70(45%) 71-80(32%) 81-90(20%) 91-120 (10%)
+
+	LIDE3	1-50(99%) 51-60(90%) 61-70(80%) 71-80(70%) 81-90(60%) 91-120 (10%)
+	CHCH7	1-50(99%) 51-60(90%) 61-70(80%) 71-80(70%) 81-90(60%) 91-120 (10%)
+	ARME	1-50(99%) 51-60(90%) 61-70(80%) 71-80(70%) 81-90(60%) 91-120 (10%)
+	QUCH2	1-50(99%) 51-60(90%) 61-70(80%) 71-80(70%) 81-90(60%) 91-120 (10%)
+
+	FX_Resp_Deciduous  	1-200 (35%)
+	FX_Seed_Deciduous	1-200 (35%)
+	FX_Seed_Evergreen	1-200 (35%)
+	NoFX_Resp_Deciduous	1-200 (35%)
+	NoFX_Resp_Evergreen	1-200 (35%)
+	NoFX_Seed_Deciduous	1-200 (35%)
+	NoFX_Seed_Evergreen	1-200 (35%)
+
+>>-----------------------------------------------------------------
+>> PRESCRIPTION IMPLEMENTATION 
+
+>>Areas
+>>2 = Federal (non-specified FS and BLM lands)
+>>4 = Tribal Area
+>>5 = PIF
+>>6 = PNIF
+>>7 = Matrix timberlands
+>>8 = AMA
+
+    HarvestImplementations
+>>  Mgmt Area   Prescription    Harvest Area    Begin Time  End Time
+>>  ---------   ------------    ------------    ----------  --------
+	2	KMC_Fed			0.850%
+	2	SOD_Sanit_Fed		0.253%	
+	2	Oak_Restoration_Fed	0.253%	
+	2	PILA_Release_Fed	0.253%
+	2	FireRisk-LightThinning	1.204%
+	2	FireRisk-ModerateThinning 1.198%
+	4	Tribal			1.357%	
+>>	4	Salvage_plant		0.3%
+	5	PIF		        2.40%	
+>>	5	Salvage_plant		0.5%
+>>	5	Pre_Comthin		1.039%  <<dropped b/c too much competition with PIF prescription
+	6	PNIF	 	        1.307%	
+>>	6	Salvage_plant		0.5%
+	7	KMC_Fed			0.850%	
+	7	SOD_Sanit_Fed		0.153%	
+	7	Oak_Restoration_Fed	0.153%	
+	7	PILA_Release_Fed	0.153%	
+	7	RxFire			0.217%
+	7	MxFire			0.115%
+	7	FireRisk-LightThinning	0.618%
+	7	FireRisk-ModerateThinning 1.099%
+>>	7	Salvage_plant		0.3%
+	8	RxFire			0.216%
+	8	MxFire			0.115%
+	8	FireRisk-LightThinning	0.624%
+	8	FireRisk-ModerateThinning 0.635%
+
+
+
+
+
+>>-----------------------------------------------------------------
+>> OUTPUTS
+
+PrescriptionMaps    harvest/prescripts-{timestep}.tif
+BiomassMaps	harvest/biomass-removed-{timestep}.tif
+EventLog            harvest-event-test-log.csv
+SummaryLog	    harvest/summary-log.csv

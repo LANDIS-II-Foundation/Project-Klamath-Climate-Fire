@@ -1,0 +1,16 @@
+LandisData  "Output Biomass Reclass"
+
+Timestep   10
+
+
+ReclassMaps
+
+>> Map Name    Forest Type    Species
+>> --------    -------------  -------
+   reclass1 -> Tanoak  LIDE3
+               LEKMC  PSME PILA PIPO CADE27
+               HEKMC  ABGRC ABPRSH PIMO3
+               SCH   FX_Resp_Deciduous FX_Seed_Deciduous FX_Seed_Evergreen NoFX_Resp_Deciduous NoFX_Resp_Evergreen NoFX_Seed_Deciduous NoFX_Seed_Evergreen QUCH2 QUGA4 QUKE
+               Hardwoods	ARME CHCH7
+
+MapFileNames   outputs/biomass-reclass/biomass-reclass-{reclass-map-name}-{timestep}.img

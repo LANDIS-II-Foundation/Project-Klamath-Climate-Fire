@@ -1,0 +1,24 @@
+LandisData  "Output Cohort Statistics"
+
+Timestep   40
+
+SpeciesAgeStats
+
+MapNames cohort-stats/{species}-{statistic}-{timestep}.img
+
+MAX ABGRC ABPRSH ARME CADE27 CHCH7 FX_Resp_Deciduous FX_Seed_Deciduous FX_Seed_Evergreen LIDE3 NoFX_Resp_Deciduous NoFX_Resp_Evergreen NoFX_Seed_Deciduous NoFX_Seed_Evergreen PILA PIMO3 PIPO PSME QUCH2 QUGA4 QUKE	
+AVG ABGRC ABPRSH ARME CADE27 CHCH7 FX_Resp_Deciduous FX_Seed_Deciduous FX_Seed_Evergreen LIDE3 NoFX_Resp_Deciduous NoFX_Resp_Evergreen NoFX_Seed_Deciduous NoFX_Seed_Evergreen PILA PIMO3 PIPO PSME QUCH2 QUGA4 QUKE	
+SD  ABGRC ABPRSH ARME CADE27 CHCH7 FX_Resp_Deciduous FX_Seed_Deciduous FX_Seed_Evergreen LIDE3 NoFX_Resp_Deciduous NoFX_Resp_Evergreen NoFX_Seed_Deciduous NoFX_Seed_Evergreen PILA PIMO3 PIPO PSME QUCH2 QUGA4 QUKE	
+MIN ABGRC ABPRSH ARME CADE27 CHCH7 FX_Resp_Deciduous FX_Seed_Deciduous FX_Seed_Evergreen LIDE3 NoFX_Resp_Deciduous NoFX_Resp_Evergreen NoFX_Seed_Deciduous NoFX_Seed_Evergreen PILA PIMO3 PIPO PSME QUCH2 QUGA4 QUKE	
+
+SiteAgeStats
+
+MapNames   cohort-stats/SITEAGE-{statistic}-{timestep}.img
+
+RICH			<< COUNT OF COHORTS
+EVEN
+
+SiteSpeciesStats
+MapNames   cohort-stats/SPP-{statistic}-{timestep}.img
+
+RICH   << count of species
