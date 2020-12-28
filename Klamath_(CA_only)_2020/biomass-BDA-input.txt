@@ -1,0 +1,23 @@
+LandisData "Biomass BDA"
+
+Timestep	1
+
+MapNames	bda/{agentName}-{timestep}.img
+
+>>SRDMapNames	bda/{agentName}-SRD-{timestep}.img
+
+>>NRDMapNames	bda/{agentName}-NRD-{timestep}.img
+
+>>BDPMapNames     bda/{agentName}-BDP-{timestep}.img
+
+LogFile		bda_log.csv
+
+BDAInputFiles	WPBR_chronic.txt
+		WPBR_low.txt
+		WPBR_high.txt
+		WPineBeetle.txt
+		WPineBeetle_peak.txt
+		JeffreyPineBeetle.txt
+		MtnPineBeetle.txt
+		FirEngraver_Peak.txt
+		FirEngraver.txt

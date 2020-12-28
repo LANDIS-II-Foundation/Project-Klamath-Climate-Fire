@@ -1,0 +1,36 @@
+LandisData  "Output Cohort Statistics"
+
+
+Timestep   10
+
+SpeciesAgeStats
+
+MapNames   spp-age-stats/{species}-{statistic}-{timestep}.img
+
+MIN 	whitefir	redfir	sjuniper	incensecedar	whitebark	foxtail	lodgepole	limber	jeffrey	sugar	wwpine	ponderosa	digger	spinyon	douglas	giant	hemlock	maple	madrone	aspen	canyonlioak	blueoak	CAblackoak	inliveoak
+     	<< minimum age for each species
+MAX 	whitefir	redfir	sjuniper	incensecedar	whitebark	foxtail	lodgepole	limber	jeffrey	sugar	wwpine	ponderosa	digger	spinyon	douglas	giant	hemlock	maple	madrone	aspen	canyonlioak	blueoak	CAblackoak	inliveoak
+		<< maximum age for each species
+>>MED		whitefir	redfir	sjuniper	incensecedar	whitebark	foxtail	lodgepole	limber	jeffrey	sugar	wwpine	ponderosa	digger	spinyon	douglas	giant	hemlock	maple	madrone	aspen	canyonlioak	blueoak	CAblackoak	inliveoak	<< median age for each species
+>>SD		whitefir	redfir	sjuniper	incensecedar	whitebark	foxtail	lodgepole	limber	jeffrey	sugar	wwpine	ponderosa	digger	spinyon	douglas	giant	hemlock	maple	madrone	aspen	canyonlioak	blueoak	CAblackoak	inliveoak	<< standard deviation age for each species
+>>AVG		whitefir	redfir	sjuniper	incensecedar	whitebark	foxtail	lodgepole	limber	jeffrey	sugar	wwpine	ponderosa	digger	spinyon	douglas	giant	hemlock	maple	madrone	aspen	canyonlioak	blueoak	CAblackoak	inliveoak	<< average age for each species
+
+
+SiteAgeStats
+
+MapNames   spp-age-stats/AGE-{statistic}-{timestep}.img
+
+>>MIN 			<< minimum age across all species on site  << this can be inferred from above
+>>MAX			<< maximum age across all species on site  << this can be inferred from above
+>>MED			<< median age across all species on site
+>>AVG			<< average age across all species on site
+RICH   			<< number of age classes across all species on site
+>>EVEN   			<< evenness 
+COUNT   		<< count of cohorts
+
+
+SiteSpeciesStats
+
+MapNames   spp-age-stats/SPP-{statistic}-{timestep}.img
+
+RICH   			<<count of species

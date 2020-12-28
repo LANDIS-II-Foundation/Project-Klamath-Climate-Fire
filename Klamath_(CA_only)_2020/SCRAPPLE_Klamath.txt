@@ -1,0 +1,366 @@
+LandisData  "SCRAPPLE"
+
+Timestep                            1
+
+AccidentalIgnitionsMap     	klamath_accidental.tif <<NEED
+LightningIgnitionsMap  		klamath_lightning.tif <<NEED
+RxIgnitionsMap  		Klamath_rx_equal.tif<<NEED
+
+AccidentalSuppressionMap	full_suppression.tif <<NEED
+LightningSuppressionMap		full_suppression.tif <<NEED
+RxSuppressionMap		full_suppression.tif <<NEED
+
+GroundSlopeMap klamath_slope_CAonly_150m_v2.tif		
+UphillSlopeAzimuthMap  klamath_upslope_CAonly_150m_v2.tif	
+
+>>Updated on 2/20 w new fits params
+LightningIgnitionsB0   -3.7
+LightningIgnitionsB1   0.05
+AccidentalIgnitionsB0  -4.1
+AccidentalIgnitionsB1  0.03
+
+MaximumFineFuels 5400 <<Derived from Fuel Loadings with Jonathan Long
+
+>> Prescribed Fire Parameters
+MaximumRxWindSpeed 11
+MaximumRxFireWeatherIndex 65.0
+MinimumRxFireWeatherIndex 10.0
+MaximumRxTemperature 32.0	<< Optional
+>> MinimumRxRelativeHumidity 22.0	<< Optional
+MaximumRxFireIntensity 1
+NumberRxAnnualFires 0
+NumberRxDailyFires 1
+FirstDayRxFires 10
+LastDayRxFires 350
+TargetRxSize 40
+>> RxZonesMap fire-zones.gis  << Optional
+
+>>These are all based on a simple glm
+MaximumSpreadAreaB0	-66 
+MaximumSpreadAreaB1	11.5 <<-3 <<FWI
+MaximumSpreadAreaB2	9.3 <<-2.5  <<effective wind speed
+
+>>Fitted params on 12/27 using optim() BFGS method : -1.79, 0.06, -.915, 0.0126
+>>Fitted params on 12/28 using optim() SANN method: 0.33980600,  0.01726217, -0.31600116,  0.03447919
+SpreadProbabilityB0 -37 <<more negative means lower spread
+SpreadProbabilityB1 0.92  <<FWI
+SpreadProbabilityB2  0.53 << relativized fine fuels. Was .915
+SpreadProbabilityB3 0.32 << effective wind speed. 
+
+IntensityFactor:FineFuelPercent  0.35 <<Was 0.1
+IntensityFactor:LadderFuelMaxAge 28
+IntensityFactor:LadderFuelBiomass 900 <<was 1200
+
+LadderFuelSpeciesList 
+PinuJeff AbieGran CaloDecu PinuPond PseuMenz
+
+SuppressionMaxWindSpeed 11
+SuppressionTable  << Adjusted in consultation with JLong, BGarrett and their fire folks
+>>Type		FWI1	FWI2	Lo	Md	High-Effectiveness
+Accidental	40 	75	0	8	16	<< Used to be 5 65 95. FWI cutoffs used to be 30 and 50
+Lightning	40 	75	0	5	10
+Rx 		40 	75  	0	5	10
+
+DeadWoodTable <<
+PinuJeff	22
+CaloDecu	33
+PinuCont	38
+PinuLamb	27
+AbieMagn	28
+AbieGran	29
+PinuAlbi	34
+PinuMont	34
+TsugMert	30
+>>PinuAtte	29
+>>PinuCoul	24
+>>PinuFlex	32
+>>PinuMono	22
+PinuPond	24
+>>PinuSabi	22
+>>PinuWash	24
+PseuMenz	27
+
+>> Mortality data is compiled from Brian Garrett and Brandon Collins 12/7/2017
+>> There could also be a high age cohort with slightly elevated mortality levels per Brian
+
+FireIntensityClass_1_DamageTable <<NEED to UPDATE with additional species
+>> Format = species [maxAge Pmortality] ... [repeating]  Any missing data is 0.0
+AbieAmab	0	70	0.6
+AbieAmab	70	110	0.33
+AbieAmab	110	500	0.3
+AbieGran	0	60	0.65
+AbieGran	60	90	0.4
+AbieGran	80	450	0.1
+AbieMagn	0	70	0.6
+AbieMagn	70	110	0.33
+AbieMagn	110	500	0.3
+AcerMacr	0	45	0.8
+AcerMacr	45	80	0.7
+AcerMacr	80	350	0.6
+AlnuRhom	0	47	0.8
+AlnuRhom	47	73	0.7
+AlnuRhom	73	250	0.6
+ArbuMenz	0	50	0.65
+ArbuMenz	50	95	0.3
+ArbuMenz	95	350	0.1
+CaloDecu	0	66	0.73
+CaloDecu	66	116	0.16
+CaloDecu	116	500	0.14
+ChamNoot	0	70	0.6
+ChamNoot	70	110	0.33
+ChamNoot	110	3500	0.3
+ChryChry	0	50	0.65
+ChryChry	50	80	0.3
+ChryChry	80	250	0.2
+FX_R_SEED	0	10	0.6
+FX_R_SEED	10	40	0.7
+FX_R_SEED	40	90	0.8
+LithDens	0	50	0.65
+LithDens	50	80	0.3
+LithDens	80	250	0.2
+NOFX_NOR_SEED	0	10	0.6
+NOFX_NOR_SEED	10	40	0.7
+NOFX_NOR_SEED	40	90	0.8
+NOFX_R_SEED	0	10	0.6
+NOFX_R_SEED	10	40	0.7
+NOFX_R_SEED	40	90	0.8
+PiceBrew	0	140	0.65
+PiceBrew	140	270	0.4
+PiceBrew	270	900	0.1
+PiceSitc	0	140	0.65
+PiceSitc	140	270	0.4
+PiceSitc	270	800	0.1
+PinuAlbi	0	140	0.87
+PinuAlbi	140	270	0.4
+PinuAlbi	270	900	0.1
+PinuAtte	0	20	0.75
+PinuAtte	20	60	0.75
+PinuAtte	60	80	0.70
+PinuCont	0	80	0.75
+PinuCont	80	160	0.56
+PinuCont	160	300	0.25
+PinuJeff	0	60	0.53
+PinuJeff	60	120	0.2
+PinuJeff	120	500	0.2
+PinuLamb	0	60	0.33
+PinuLamb	60	105	0.09
+PinuLamb	105	500	0.08
+PinuMont	0	90	0.55
+PinuMont	90	180	0.64
+PinuMont	180	550	0.61
+PinuPond	0	48	0.33
+PinuPond	48	95	0.09
+PinuPond	95	600	0.08
+PseuMenz	0	58	0.48
+PseuMenz	58	100	0.22
+PseuMenz	100	750	0.2
+QuerChry	0	75	0.5625
+QuerChry	75	125	0.333333333
+QuerChry	125	250	0.2
+QuerKell	0	70	0.48
+QuerKell	70	125	0.27
+QuerKell	125	300	0.15
+QuerGarr	0	60	0.8
+QuerGarr	60	90	0.7
+QuerGarr	90	300	0.6
+TaxuBrev	0	30	0.8
+TaxuBrev	30	70	0.7
+TaxuBrev	70	400	0.6
+SequSemp	0	60	0.65
+SequSemp	60	90	0.4
+SequSemp	90	2500	0.1
+TaxuBrev	0	110	0.8
+TaxuBrev	110	215	0.7
+TaxuBrev	215	400	0.6
+TsugMert	0	110	0.6
+TsugMert	110	215	0.2
+TsugMert	215	800	0.1
+
+
+FireIntensityClass_2_DamageTable
+>> Format = species [maxAge Pmortality] ... [repeating]  Any missing data is 0.0
+AbieAmab	0	70	0.971830986
+AbieAmab	70	110	0.770072993
+AbieAmab	110	500	0.47080292
+AbieGran	0	60	0.971830986
+AbieGran	60	90	0.770072993
+AbieGran	80	450	0.47080292
+AbieMagn	0	70	0.971830986
+AbieMagn	70	110	0.770072993
+AbieMagn	110	500	0.47080292
+AcerMacr	0	45	1
+AcerMacr	45	80	1
+AcerMacr	80	350	1
+AlnuRhom	0	47	1
+AlnuRhom	47	73	1
+AlnuRhom	73	250	1
+ArbuMenz	0	50	0.8
+ArbuMenz	50	95	0.5
+ArbuMenz	95	350	0.4
+CaloDecu	0	66	0.896551724
+CaloDecu	66	116	0.615384615
+CaloDecu	116	500	0.222222222
+ChamNoot	0	70	0.971830986
+ChamNoot	70	110	0.770072993
+ChamNoot	110	3500	0.47080292
+ChryChry	0	50	0.8
+ChryChry	50	80	0.5
+ChryChry	80	250	0.4
+FX_R_SEED	0	10	1
+FX_R_SEED	10	40	1
+FX_R_SEED	40	90	1
+LithDens	0	50	0.8
+LithDens	50	80	0.5
+LithDens	80	250	0.4
+NOFX_NOR_SEED	0	10	1
+NOFX_NOR_SEED	10	40	1
+NOFX_NOR_SEED	40	90	1
+NOFX_R_SEED	0	10	1
+NOFX_R_SEED	10	40	1
+NOFX_R_SEED	40	90	1
+PiceBrew	0	140	0.971830986
+PiceBrew	140	270	0.770072993
+PiceBrew	270	900	0.47080292
+PiceSitc	0	140	0.971830986
+PiceSitc	140	270	0.770072993
+PiceSitc	270	800	0.47080292
+PinuAlbi	0	140	0.993710692
+PinuAlbi	140	270	0.882352941
+PinuAlbi	270	900	0.4
+PinuAtte	0	20	0.999422966
+PinuAtte	20	60	0.980169972
+PinuAtte	60	80	0.92
+PinuCont	0	80	0.999422966
+PinuCont	80	160	0.980169972
+PinuCont	160	300	0.6
+PinuJeff	0	60	1
+PinuJeff	60	120	0.731481481
+PinuJeff	120	500	0.489361702
+PinuLamb	0	60	0.870763296
+PinuLamb	60	105	0.489850746
+PinuLamb	105	500	0.316091954
+PinuMont	0	90	1
+PinuMont	90	180	0.95
+PinuMont	180	550	0.666666667
+PinuPond	0	48	0.870763296
+PinuPond	48	95	0.489850746
+PinuPond	95	600	0.316091954
+PseuMenz	0	58	0.966723068
+PseuMenz	58	100	0.713615023
+PseuMenz	100	750	0.28957529
+QuerChry	0	75	1
+QuerChry	75	125	0.8
+QuerChry	125	250	0.4
+QuerKell	0	70	1
+QuerKell	70	125	0.714285714
+QuerKell	125	300	0.5
+QuerGarr	0	60	1
+QuerGarr	60	90	1
+QuerGarr	90	300	1
+TaxuBrev	0	30	1
+TaxuBrev	30	70	1
+TaxuBrev	70	400	1
+SequSemp	0	60	0.971830986
+SequSemp	60	90	0.770072993
+SequSemp	90	2500	0.47080292
+TaxuBrev	0	110	1
+TaxuBrev	110	215	1
+TaxuBrev	215	400	1
+TsugMert	0	110	0.8
+TsugMert	110	215	0.5
+TsugMert	215	800	0.3
+
+
+FireIntensityClass_3_DamageTable
+>> Format = species [maxAge Pmortality] ... [repeating]  Any missing data is 0.0
+AbieAmab	0	40	1
+AbieAmab	40	80	0.714285714
+AbieAmab	80	500	0.8
+AbieGran	0	40	1
+AbieGran	40	80	0.714285714
+AbieGran	80	450	0.8
+AbieMagn	0	40	1
+AbieMagn	40	80	0.714285714
+AbieMagn	80	500	0.8
+AcerMacr	0	30	1
+AcerMacr	30	70	1
+AcerMacr	70	350	1
+AlnuRhom	0	30	1
+AlnuRhom	30	70	1
+AlnuRhom	70	250	1
+ArbuMenz	0	30	1
+ArbuMenz	30	70	0.9
+ArbuMenz	70	350	0.9
+CaloDecu	0	40	0.9
+CaloDecu	40	80	0.8
+CaloDecu	80	500	0.8
+ChamNoot	0	40	1
+ChamNoot	40	80	0.714285714
+ChamNoot	80	3500	0.8
+ChryChry	0	30	1
+ChryChry	30	70	0.9
+ChryChry	70	250	0.9
+FX_R_SEED	0	10	1
+FX_R_SEED	10	40	1
+FX_R_SEED	40	90	1
+LithDens	0	30	1
+LithDens	30	70	0.9
+LithDens	70	250	0.9
+NOFX_NOR_SEED	0	10	1
+NOFX_NOR_SEED	10	40	1
+NOFX_NOR_SEED	40	90	1
+NOFX_R_SEED	0	10	1
+NOFX_R_SEED	10	40	1
+NOFX_R_SEED	40	90	1
+PiceBrew	0	140	1
+PiceBrew	140	270	0.714285714
+PiceBrew	270	900	0.8
+PiceSitc	0	140	1
+PiceSitc	140	270	0.714285714
+PiceSitc	270	800	0.8
+PinuAlbi	0	30	0.97
+PinuAlbi	30	70	0.8
+PinuAlbi	70	900	0.8
+PinuAtte	0	20	1
+PinuAtte	20	60	1
+PinuAtte	60	80	1
+PinuCont	0	30	1
+PinuCont	30	70	1
+PinuCont	70	300	1
+PinuJeff	0	40	1
+PinuJeff	40	80	0.736842105
+PinuJeff	80	500	0.892857143
+PinuLamb	0	40	1
+PinuLamb	40	80	0.736842105
+PinuLamb	80	500	0.892857143
+PinuMont	0	40	0.97
+PinuMont	40	80	0.8
+PinuMont	80	550	0.8
+PinuPond	0	48	1
+PinuPond	48	95	0.736842105
+PinuPond	95	600	0.892857143
+PseuMenz	0	40	0.9
+PseuMenz	40	80	0.976190476
+PseuMenz	80	750	0.901639344
+QuerChry	0	30	0.97
+QuerChry	30	70	0.8
+QuerChry	70	250	0.7
+QuerKell	0	30	0.97
+QuerKell	30	70	0.8
+QuerKell	70	300	0.7
+QuerGarr	0	30	1
+QuerGarr	30	70	1
+QuerGarr	70	300	1
+TaxuBrev	0	30	1
+TaxuBrev	30	70	1
+TaxuBrev	70	400	1
+SequSemp	0	40	1
+SequSemp	40	80	0.8
+SequSemp	80	2500	0.75
+TaxuBrev	0	30	1
+TaxuBrev	30	70	1
+TaxuBrev	70	400	1
+TsugMert	0	30	1
+TsugMert	30	70	0.9
+TsugMert	70	800	0.8
+

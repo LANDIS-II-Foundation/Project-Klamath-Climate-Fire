@@ -1,0 +1,35 @@
+LandisData	Species									
+										
+>>		Long	Sexual	Shade 	Fire 	Seed 	Max	Veget	MinAge	MaxAge	Postfire 
+>>		evity	Maturity	Tole	Tole	DispEff	SeedDis	reprodP	Resprout	Resprout	regene
+AbieAmab	500	20	4	1	30	200	0	0	0	none
+AbieGran	450	40	4	2	30	200	0	0	0	none
+AbieMagn	500	40	3	3	30	200	0	0	0	none
+AcerMacr	350	10	4	2	10	100	0.5	1	200	resprout
+AlnuRhom	250	7	2	2	200	1000	0.2	2	200	resprout	<<n-fixer
+AlnuRubr	250	7	2	2	400	1000	0.2	2	200	resprout	<<n-fixer
+ArbuMenz	350	5	3	1	30	1000	0.7	5	300	resprout
+CaloDecu	500	30	4	3	30	2000	0	0	0	none
+ChamNoot	3500	40	5	1	30	1000	0.2	20	3000	resprout
+ChryChry	250	40	3	3	100	800	0.8	2	200	resprout
+FX_R_SEED	90	5	1	1	30	500	0.75	5	70	resprout	<<n-fixer
+LithDens	250	15	4	2	100	400	0.8	2	200	resprout	
+NOFX_R_SEED	90	5	1	1	30	500	0.75	5	70	resprout	
+NOFX_NOR_SEED	90	5	2	1	30	1000	0	0	0	none	
+PiceBrew	900	25	5	1	30	500	0	0	0	none	
+PiceSitc	800	30	2	1	30	800	0	0	0	none
+PinuAlbi	900	30	2	2	30	5000	0	0	0	none
+PinuAtte	80	15	1	1	30	200	0	0	0	serotiny
+PinuCont	300	7	1	2	30	300	0	0	0	none
+PinuJeff	500	25	2	5	50	350	0	0	0	none
+PinuLamb	550	20	3	4	30	150	0	0	0	none
+PinuMont	600	15	2	3	30	400	0	0	0	none
+PinuPond	600	20	2	5	40	150	0	0	0	none
+PseuMenz	750	15	3	3	100	1500	0	0	0	none
+QuerChry	250	20	3	1	30	1000	0.9	1	250	resprout
+QuerDoug	300	20	3	2	30	1000	0.8	1	300	resprout
+QuerKell	300	30	3	2	100	600	0.8	1	300	resprout
+QuerGarr	350	40	2	2	100	600	0.8	3	300	resprout
+SequSemp	2500	10	5	4	60	120	0	0	0	none
+TaxuBrev	400	12	1	1	30	300	0.1	10	60	resprout	
+TsugMert	800	20	5	1	100	500	0	0	0	none

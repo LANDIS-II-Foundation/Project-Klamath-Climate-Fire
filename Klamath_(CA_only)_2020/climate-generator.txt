@@ -1,0 +1,15 @@
+LandisData "Climate Config"				
+		
+ClimateTimeSeries			Daily_SequencedYears
+ClimateFile				Klamath_historical_12k.csv
+ClimateFileFormat			Daily_Temp-C_Precip-mmDay
+
+SpinUpClimateTimeSeries			Daily_SequencedYears
+SpinUpClimateFile			Klamath_historical_12k.csv
+SpinUpClimateFileFormat			Daily_Temp-C_Precip-mmDay
+
+
+UsingFireClimate			yes
+>>RelativeHumiditySlopeAdjust             77.68
+SpringStart				10
+WinterStart 				360
